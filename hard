@@ -1,0 +1,27 @@
+hard level
+import jakarta.persistence.*;
+
+@Entity
+public class Account {
+    @Id
+    private int id;
+    private String name;
+    private double balance;
+
+    // Getters and Setters
+}
+import jakarta.persistence.*;
+import java.util.Date;
+
+@Entity
+public class Transaction {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private int fromAcc;
+    private int toAcc;
+    private double amount;
+    private Date date = new Date();
+
+    // Getters and Setters
+}
